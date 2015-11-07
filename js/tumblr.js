@@ -11,40 +11,39 @@
   });
 
   function createTemplate(post) {
-      var template = document.querySelector('.' + post.type + 'Post');
+    var template = document.querySelector('.' + post.type + 'Post');
 
-      switch(post.type) {
-          case 'text':
-              createTextPost(template, post);
-              break;
-          case 'photo':
-              createPhotoPost(template, post);
-              break;
-          case 'quote':
-              createQuotePost(template, post);
-              break;
-          case 'link':
-              createLinkPost(template, post);
-              break;
-          case 'chat':
-              createChatPost(template, post);
-              break;
-          case 'audio':
-              createAudioPost(template, post);
-              break;
-          case 'video':
-              createVideoPost(template, post);
-              break;
-          case 'answer':
-              createAnswerPost(template, post);
-              break;
-          default:
+    switch(post.type) {
+      case 'text':
+        createTextPost(template, post);
+        break;
+      case 'photo':
+        createPhotoPost(template, post);
+        break;
+      case 'quote':
+        createQuotePost(template, post);
+        break;
+      case 'link':
+        createLinkPost(template, post);
+        break;
+      case 'chat':
+        createChatPost(template, post);
+        break;
+      case 'audio':
+        createAudioPost(template, post);
+        break;
+      case 'video':
+        createVideoPost(template, post);
+        break;
+      case 'answer':
+        createAnswerPost(template, post);
+        break;
+      default:
         console.log('post.type not found.');
-              // TODO: handle
-              break;
-      }
+        break;
+    }
 
-      if (template) render(template);
+    if (template) render(template);
   }
 
   /**
@@ -54,7 +53,7 @@
   */
   function createTextPost(template, post) {
     template.content.querySelector('.postTitle').innerHTML = post.title || 'Post Title';
-      template.content.querySelector('.postBody').innerHTML = post.body;
+    template.content.querySelector('.postBody').innerHTML = post.body;
   }
 
   /**
@@ -71,9 +70,9 @@
   */
   function createPhotoPost(template, post) {
     template.content.querySelector('.postCaption').innerHTML = post.caption;
-      post.photos.forEach(function (photo) {
-          template.content.querySelector('.postPhotos').innerHTML = '<img src="' + photo.original_size.url + '">';
-      });
+    post.photos.forEach(function (photo) {
+      template.content.querySelector('.postPhotos').innerHTML = '<img src="' + photo.original_size.url + '">';
+    });
   }
 
   /**
@@ -83,7 +82,7 @@
   */
   function createQuotePost(template, post) {
     template.content.querySelector('.postText').innerHTML = post.text;
-      template.content.querySelector('.postSource').innerHTML = post.source;
+    template.content.querySelector('.postSource').innerHTML = post.source;
   }
 
   /**
@@ -104,7 +103,7 @@
   */
   function createLinkPost(template, post) {
     template.content.querySelector('.postTitle').innerHTML = post.title;
-      template.content.querySelector('.postDescription').innerHTML = post.description;
+    template.content.querySelector('.postDescription').innerHTML = post.description;
   }
 
   /**
@@ -118,7 +117,7 @@
   */
   function createChatPost(template, post) {
     template.content.querySelector('.postTitle').innerHTML = post.title;
-      template.content.querySelector('.postBody').innerHTML = post.body;
+    template.content.querySelector('.postBody').innerHTML = post.body;
   }
 
   /**
@@ -135,7 +134,7 @@
   */
   function createAudioPost(template, post) {
     template.content.querySelector('.postCaption').innerHTML = post.caption;
-      template.content.querySelector('.postPlayer').innerHTML = post.player;
+    template.content.querySelector('.postPlayer').innerHTML = post.player;
   }
 
   /**
@@ -147,9 +146,9 @@
   */
   function createVideoPost(template, post) {
     template.content.querySelector('.postCaption').innerHTML = post.caption;
-      post.player.forEach(function (video) {
-        template.content.querySelector('.postPlayer').innerHTML += video.embed_code;
-      });
+    post.player.forEach(function (video) {
+      template.content.querySelector('.postPlayer').innerHTML += video.embed_code;
+    });
   }
 
   /**
@@ -161,11 +160,11 @@
   */
   function createAnswerPost(template, post) {
     template.content.querySelector('.postQuestion').innerHTML = post.question;
-      template.content.querySelector('.postAnswer').innerHTML = post.answer;
+    template.content.querySelector('.postAnswer').innerHTML = post.answer;
   }
 
   function render(template) {
     var clone = document.importNode(template.content, true);
-      document.body.appendChild(clone);
+    document.body.appendChild(clone);
   }
 })(jQuery);
