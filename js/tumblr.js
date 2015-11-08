@@ -6,6 +6,7 @@
     api_key: 'YdiLRgT6yBypToGc4IN5oohbUWegmjwNL5hlTLdcfBhrMCiIR9'
     }
   , success: function (results) {
+      console.log(results);
       results.response.posts.forEach(createTemplate);
     }
   });
@@ -102,6 +103,7 @@
   *   alt_sizes 		Array  Alternate photo sizes, each with the same properties as above.
   */
   function createLinkPost(template, post) {
+    template.content.querySelector('.postTitle').href = post.url;
     template.content.querySelector('.postTitle').innerHTML = post.title;
     template.content.querySelector('.postDescription').innerHTML = post.description;
   }
