@@ -1,5 +1,25 @@
+@font-face {
+  font-family: 'Prohibition';
+  src: url('../fonts/2FA18D_4_0.eot');
+  src: url('../fonts/2FA18D_4_0.eot?#iefix') format('embedded-opentype'),url('../fonts/2FA18D_4_0.woff2') format('woff2'),url('../fonts/2FA18D_4_0.woff') format('woff'),url('../fonts/2FA18D_4_0.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'ProximaNova';
+  src: url('../fonts/proximanova-reg-webfont.eot');
+  src: url('../fonts/proximanova-reg-webfont.woff') format('woff');
+}
+
 body{
   margin: 0 auto;
+  background-color: #cecece;
+}
+
+.postContainer{
+  background-color: #fff;
+  margin: 30px;
+  padding: 30px;
+  border: 1px solid #000;
 }
 
 .textPost{
@@ -7,9 +27,10 @@ body{
 }
 
 .postTitle{
+  font-family: 'Prohibition';
   text-transform: uppercase;
 }
 
 .postBody{
-
+  font-family: 'ProximaNova';
 }
