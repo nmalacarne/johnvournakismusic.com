@@ -170,6 +170,6 @@
    */
   function render(template) {
     var clone = document.importNode(template.content, true);
-    document.body.appendChild(clone);
+    document.querySelector('#posts').appendChild(clone);
   }
 })(jQuery);
