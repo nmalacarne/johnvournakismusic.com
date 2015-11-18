@@ -1,4 +1,7 @@
 (function ($) {
+  const POSTS_PER_PAGE = 3;
+  const FEED_TARGET = '.tumblr-feed';
+
   $.ajax({
     url: 'https://api.tumblr.com/v2/blog/johnvournakis.tumblr.com/posts'
   , dataType: 'jsonp'
@@ -6,10 +9,24 @@
     api_key: 'YdiLRgT6yBypToGc4IN5oohbUWegmjwNL5hlTLdcfBhrMCiIR9'
     }
   , success: function (results) {
-      console.log(results);
-      results.response.posts.forEach(createTemplate);
+      $('.page-selection').bootpag({
+        total: results.response.posts.length / POSTS_PER_PAGE
+      }).on('page', function (event, num) {
+        loadPage(results.response.posts, num);
+      });
+
+      loadPage(results.response.posts, 1);
     }
   });
+
+  function loadPage(posts, pageNum) {
+    var start = (POSTS_PER_PAGE * pageNum) - 1;
+    var end   = start + POSTS_PER_PAGE;
+
+    var posts = posts.slice(start, end);
+    $(FEED_TARGET).html('');
+    posts.forEach(createTemplate);
+  }
 
   function createTemplate(post) {
     var template = document.querySelector('.' + post.type + 'Post');
@@ -148,8 +165,9 @@
   */
   function createVideoPost(template, post) {
     template.content.querySelector('.postCaption').innerHTML = post.caption;
+    template.content.querySelector('.postPlayer').innerHTML = '';
     post.player.forEach(function (video) {
-      template.content.querySelector('.postPlayer').innerHTML += video.embed_code;
+      template.content.querySelector('.postPlayer').innerHTML += video.embed_code + '<br>';
     });
   }
 
@@ -170,6 +188,6 @@
    */
   function render(template) {
     var clone = document.importNode(template.content, true);
-    document.querySelector('#posts').appendChild(clone);
+    document.querySelector(FEED_TARGET).appendChild(clone);
   }
 })(jQuery);
