@@ -12,7 +12,7 @@
 
 body{
   margin: 0 auto;
-  background-color: #cecece;
+  background-color: #F2F2F2;
 }
 
 #wrap{
@@ -21,24 +21,101 @@ body{
   margin: 0 auto -60px;
 }
 
+.news{
+  text-transform: uppercase;
+  font-family: 'Prohibition';
+}
+
+.footer{
+  background-color: #fff;
+}
+
+.nav > li > a:hover{
+  background-color: #fff;
+}
+
+.nav > li > a:hover{
+  background-color: #fff;
+}
+
+.navbar{
+   background-color: transparent;
+   background: transparent;
+   border-color: transparent;
+   text-align: right;
+}
+
+.navbar-collapse{
+  text-align: center;
+}
+
+.jv-nav{
+  background-color: #fff;
+  text-transform: uppercase;
+  font-family: 'ProximaNova';
+}
+
+.jv-logo{
+  text-transform: uppercase;
+  font-family: 'Prohibition';
+  font-size: 22px;
+  color: #000;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.jv-nav ul a{
+  letter-spacing: 3px;
+  color: #909090;
+  transition: .3s ease;
+}
+
+.jv-nav a:hover{
+  color: #000;
+}
+
+.icon-bar {
+  background-color:#000000 !important;
+}
+
+.wide {
+  width:100%;
+  height:500px;
+  background-image:url('../img/header.jpg');
+  background-position: center;
+  background-size:cover;
+}
+
+.wide img {
+  width:100%;
+}
+
 .postContainer{
   background-color: #fff;
-  margin: 30px;
-  padding: 30px;
-  border: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 20px;
 }
 
-.textPost{
-
+.postContainer img{
+  max-width: 500px;
+  height: auto;
 }
 
-.postTitle{
+.postContainer h1{
   font-family: 'Prohibition';
   text-transform: uppercase;
 }
 
-.postBody{
+.postContainer p{
   font-family: 'ProximaNova';
+}
+
+.textPost{
+  font-family: 'ProximaNova';
+}
+
+.tour{
+  border-left: 1px solid #000;
 }
 
 .footer{

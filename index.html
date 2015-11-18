@@ -7,83 +7,110 @@
 
 <body>
   <div id="wrap">
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top jv-nav">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#"><span class="jv-logo">John Vournakis</span></a>
+      </div>
+
+      <div class="navbar-fixed navbar-collapse collapse">
+        <ul class="nav navbar-nav jv-nav-list">
+          <li><a href="">Home</a></li>
+          <li><a href="">Music</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Tour</a></li>
+          <li><a href="">Merch</a></li>
+        </ul>
+      </div>
     </nav>
-    <div class="container">
-      <div class="row">
-        <div class="jumbotron">
-          <!--HEADER-->
-        </div>
-      </div>
 
-      <div class="row">
-        <div id="posts">
-
-          <template class="textPost">
-            <div class="col-sm-8 postContainer">
-                <h1 class="postTitle"></h1>
-                <div class="postBody"></div>
-            </div>
-          </template>
-
-          <template class="photoPost">
-            <div class="col-sm-8 postContainer">
-              <b class="postCaption"></b>
-              <div class="postPhotos"></div>
-            </div>
-          </template>
-
-          <template class="quotePost">
-            <div class="col-sm-8 postContainer">
-              <p class="postText"></p>
-              <div class="postSource"></div>
-            </div>
-          </template>
-
-          <template class="linkPost">
-            <div class="col-sm-8 postContainer">
-              <a class="postTitle"></a>
-              <p class="postDescription"></p>
-            </div>
-          </template>
-
-          <template class="chatPost">
-            <div class="col-sm-8 postContainer">
-              <h1 class="postTitle"></h1>
-              <p class="postBody"></p>
-            </div>
-          </template>
-
-          <template class="audioPost">
-            <div class="col-sm-8 postContainer">
-              <h1 class="postCaption"></h1>
-              <div class="postPlayer"></div>
-            </div>
-          </template>
-
-          <template class="videoPost">
-            <div class="col-sm-8 postContainer">
-              <h1 class="postCaption"></h1>
-              <div class="postPlayer"></div>
-            </div>
-          </template>
-
-          <template class="answerPost">
-            <div class="col-sm-8 postContainer">
-              <p class="postQuestion"></p>
-              <p class="postAnswer"></p>
-            </div>
-          </template>
-
-        </div>
-      </div>
-
+    <div class="wide">
     </div>
+
+    <div class="container col-sm-9">
+      <div id="posts">
+
+        <div class="text-left news">
+          <h1>News</h1>
+        </div>
+
+        <template class="textPost">
+          <div class="col-sm-9 postContainer">
+              <h1 class="postTitle"></h1>
+              <div class="postBody"></div>
+          </div>
+        </template>
+
+        <template class="photoPost">
+          <div class="col-sm-9 postContainer">
+            <div class="postPhotos"></div>
+            <br>
+            <b class="postCaption"></b>
+          </div>
+        </template>
+
+        <template class="quotePost">
+          <div class="col-sm-9 postContainer">
+            <p class="postText"></p>
+            <div class="postSource"></div>
+          </div>
+        </template>
+
+        <template class="linkPost">
+          <div class="col-sm-9 postContainer">
+            <a class="postTitle"></a>
+            <p class="postDescription"></p>
+          </div>
+        </template>
+
+        <template class="chatPost">
+          <div class="col-sm-9 postContainer">
+            <h1 class="postTitle"></h1>
+            <p class="postBody"></p>
+          </div>
+        </template>
+
+        <template class="audioPost">
+          <div class="col-sm-9 postContainer">
+            <h1 class="postCaption"></h1>
+            <div class="postPlayer"></div>
+          </div>
+        </template>
+
+        <template class="videoPost">
+          <div class="col-sm-9 postContainer">
+            <h1 class="postCaption"></h1>
+            <div class="postPlayer"></div>
+          </div>
+        </template>
+
+        <template class="answerPost">
+          <div class="col-sm-9 postContainer">
+            <p class="postQuestion"></p>
+            <p class="postAnswer"></p>
+          </div>
+        </template>
+
+      </div>
+    </div>
+
+    <div class="container col-md-3 col-sm-12 tour">
+      <div class="text-left news">
+        <h1>Upcoming Shows</h1>
+      </div>
+      <div class="col-md-3 col-sm-12">
+      </div>
+    </div>
+
   </div>
 
 
   <div id="footer">
-    <div class="container-fluid">
+    <div class="container-fluid col-xs-12">
       <div class="row">
         <!--FOOTER-->
         <footer class="footer">fdsfsdf</footer>
